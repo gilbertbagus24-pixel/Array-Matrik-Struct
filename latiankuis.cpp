@@ -61,6 +61,18 @@ void caribuku(){
 
 }
 
+void carijudul(string judul){
+	cout << "Masukan judul: ";
+	getline(cin, judul);
+	for(int i=0; i<jumlah; i++){
+		if (dat[i].judul == judul){
+		cout << "Buku ditemukan!\n";
+		cout << dat[i].judul << ", " << dat[i].penulis << ", " << dat[i].tahun << endl;
+		} else {
+			cout << "DATA TIDAK DITEMUKAN!\n";
+			}
+		}
+	}
 
 int main(){
 	int pilihan=0;
