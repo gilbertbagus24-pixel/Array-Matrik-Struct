@@ -61,17 +61,25 @@ void caribuku(){
 
 }
 
-void carijudul(string judul){
+int carijudul(string carijudul, int index = 0, dat[index].judul){
 	cout << "Masukan judul: ";
-	getline(cin, judul);
-	for(int i=0; i<jumlah; i++){
-		if (dat[i].judul == judul){
-		cout << "Buku ditemukan!\n";
-		cout << dat[i].judul << ", " << dat[i].penulis << ", " << dat[i].tahun << endl;
-		} else {
-			cout << "DATA TIDAK DITEMUKAN!\n";
-			}
+	getline(cin, carijudul);
+	if (index >= 0){
+		return -1;
 		}
+	if(dat[index].judul == carijudul){
+		return index;
+		}
+		
+		return carijudul(dat, index +1, carijudul)
+	//~ for(int i=0; i<jumlah; i++){
+		//~ if (dat[i].judul == judul){
+		//~ cout << "Buku ditemukan!\n";
+		//~ cout << dat[i].judul << ", " << dat[i].penulis << ", " << dat[i].tahun << endl;
+		//~ } else {
+			//~ cout << "DATA TIDAK DITEMUKAN!\n";
+			//~ }
+		//~ }
 	}
 
 int main(){
