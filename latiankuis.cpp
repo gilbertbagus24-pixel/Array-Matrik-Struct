@@ -37,8 +37,7 @@ void tampilbuku(){
 	cout << setw(15) << "Penulis";
 	cout << setw(10) << "Tahun rilis";
 	cout << "\n---------------------------------------------------------------\n";
-	for(int i = 0; i<jumlah;
-	 i++){
+	for(int i = 0; i<jumlah; i++){
 		cout << setw(8) << dat[i].id;
 		cout << setw(30) << dat[i].judul;
 		cout << setw(15) << dat[i].penulis;
@@ -47,10 +46,24 @@ void tampilbuku(){
 	}
 	
 void caribuku(){
+	int idcari;
+	cout << "Masukan Id buku: ";
+	cin >> idcari;
+	for(int i = 0; i<jumlah; i++){
+		if(dat[i].id == idcari){
+		cout << "Buku ditemukan!\n";
+		cout << dat[i].judul << ", " << dat[i].penulis << ", " << dat[i].tahun << endl;
+		 } else {
+			cout << "DATA TIDAK DITEMUKAN!\n";
+		}
 	
 	}
 
-	int pilihan;
+}
+
+
+int main(){
+	int pilihan=0;
 	
 	do {
 		cout << "==MENU==\n";
@@ -64,22 +77,30 @@ void caribuku(){
 		
 		switch(pilihan){
 			case 1 : 
-			cout << "Tambah Buku\n";
-			
+				cout << "Tambah Buku\n";
+				tambahbuku();
+				break;
 			case 2: 
-			cout << "2. Semua Buku\n";
-			
+				cout << "Semua Buku\n";
+				tampilbuku();
+				break;
 			case 3:
-			cout << "3. Cari Buku berdasarkan Id\n";
-			
+				cout << "Cari Buku berdasarkan Id\n";
+				caribuku();
+				break;
 			case 4: 
-			cout << "4. Cari Bukku berdasarkan Judul\n";
-			
+				cout << "Cari Bukku berdasarkan Judul\n";
+				break;
+			case 5: 
+				cout << "Exiting program...\n";
+				break;
+			default:
+				cout << "PILIHAN TIDAK VALID\n";
 			
 			}
 	
 		} while (pilihan != 5);
 		
-		return 0;
+	return 0;
 	
 	}
