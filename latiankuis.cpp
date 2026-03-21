@@ -79,6 +79,21 @@ int carijudulbuku(buku dat[], string carijudul, int index = 0){
 		//~ }
 	}
 
+void checkreq(){
+	string cari;
+	cout << "Masukan judul: ";
+	getline(cin, cari);
+	int hasil = carijudulbuku(dat, cari, 0);
+	
+	if (hasil !=-1){
+		cout << "Buku ditemukan!\n";
+		cout << dat[hasil].judul << ", " << dat[hasil].penulis << ", " << dat[hasil].tahun << endl;
+		} else {
+			cout << "Buku tidak ditemukan!\n";
+			}
+	}
+
+
 int main(){
 	int pilihan=0;
 	
