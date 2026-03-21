@@ -25,7 +25,9 @@ void tambahbuku(){
 		cout << "Tahun rilis buku: ";
 		cin >> dat[jumlah].tahun;
 		cin.ignore();
+		cout << "Buku berhasil ditambahkan!\n";
 		jumlah++;
+		
 		
 		}
 	}
@@ -82,6 +84,7 @@ int carijudulbuku(buku dat[], string carijudul, int index = 0){
 void checkreq(){
 	string cari;
 	cout << "Masukan judul: ";
+	cin.ignore();
 	getline(cin, cari);
 	int hasil = carijudulbuku(dat, cari, 0);
 	
