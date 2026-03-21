@@ -122,6 +122,7 @@ int main(){
 				break;
 			case 4: 
 				cout << "Cari Bukku berdasarkan Judul\n";
+				checkreq();
 				break;
 			case 5: 
 				cout << "Exiting program...\n";
